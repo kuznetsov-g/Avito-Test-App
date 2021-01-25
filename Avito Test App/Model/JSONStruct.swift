@@ -16,18 +16,15 @@ struct resultStruct: Decodable {
     var title               : String
     var actionTitle         : String
     var selectedActionTitle : String
-    var list                : listStruct
+    var list                : [listStruct]
 }
 
 struct listStruct: Decodable {
     var id          : String
     var title       : String
-    var description : String
-    var icon        : iconStruct
+    var description : String?
+    var icon        : Dictionary<String, String>
     var price       : String
     var isSelected  : Bool
 }
 
-struct iconStruct: Decodable {
-    var icon : Dictionary<String, String>
-}
