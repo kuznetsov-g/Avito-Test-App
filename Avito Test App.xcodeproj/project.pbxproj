@@ -13,6 +13,7 @@
 		283B7B2A25BF32BE0065314C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B2825BF32BE0065314C /* Main.storyboard */; };
 		283B7B2C25BF32C00065314C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B2B25BF32C00065314C /* Assets.xcassets */; };
 		283B7B2F25BF32C00065314C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B2D25BF32C00065314C /* LaunchScreen.storyboard */; };
+		283B7B4125BF35C20065314C /* JSONStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B4025BF35C20065314C /* JSONStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		283B7B2B25BF32C00065314C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		283B7B2E25BF32C00065314C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		283B7B3025BF32C00065314C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283B7B4025BF35C20065314C /* JSONStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		283B7B2125BF32BE0065314C /* Avito Test App */ = {
 			isa = PBXGroup;
 			children = (
+				283B7B3B25BF32E80065314C /* Sys */,
+				283B7B3A25BF32E10065314C /* Controller */,
+				283B7B3925BF32DB0065314C /* View */,
+				283B7B3825BF32D50065314C /* Model */,
+			);
+			path = "Avito Test App";
+			sourceTree = "<group>";
+		};
+		283B7B3825BF32D50065314C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				283B7B4025BF35C20065314C /* JSONStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		283B7B3925BF32DB0065314C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				283B7B2825BF32BE0065314C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		283B7B3A25BF32E10065314C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				283B7B2625BF32BE0065314C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		283B7B3B25BF32E80065314C /* Sys */ = {
+			isa = PBXGroup;
+			children = (
 				283B7B2225BF32BE0065314C /* AppDelegate.swift */,
 				283B7B2425BF32BE0065314C /* SceneDelegate.swift */,
-				283B7B2625BF32BE0065314C /* ViewController.swift */,
-				283B7B2825BF32BE0065314C /* Main.storyboard */,
 				283B7B2B25BF32C00065314C /* Assets.xcassets */,
 				283B7B2D25BF32C00065314C /* LaunchScreen.storyboard */,
 				283B7B3025BF32C00065314C /* Info.plist */,
 			);
-			path = "Avito Test App";
+			path = Sys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +174,7 @@
 			files = (
 				283B7B2725BF32BE0065314C /* ViewController.swift in Sources */,
 				283B7B2325BF32BE0065314C /* AppDelegate.swift in Sources */,
+				283B7B4125BF35C20065314C /* JSONStruct.swift in Sources */,
 				283B7B2525BF32BE0065314C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V74N9HQR3;
-				INFOPLIST_FILE = "Avito Test App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Avito Test App/Sys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Kuznetsov-G.Avito-Test-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V74N9HQR3;
-				INFOPLIST_FILE = "Avito Test App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Avito Test App/Sys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Kuznetsov-G.Avito-Test-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
