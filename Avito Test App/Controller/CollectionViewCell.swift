@@ -6,12 +6,29 @@
 //
 
 import UIKit
+import Foundation
 
 class CollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var cellTopTitle   : UILabel!
+    @IBOutlet weak var cellDescription: UILabel!
+    @IBOutlet weak var cellPrice      : UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
+    func commonInit(cellTopTitle: String, cellDescription: String, cellPrice: String)
+//    , cellImageProduct: Dictionary<String, String>, cellImageSelected: Bool)
+    {
+        self.cellTopTitle.text    = cellTopTitle
+        self.cellDescription.text = cellDescription
+        self.cellPrice.text       = cellPrice
+        if cellDescription == " " {
+            self.cellDescription.isHidden = true
+    }
+    
+}
 }

@@ -7,12 +7,19 @@
 
 import Foundation
 
+protocol CardDataDelegate: class {
+    func updateData(status: String )
+}
+
 class JSONData {
     let url = URL(string: "https://raw.githubusercontent.com/avito-tech/internship/main/result.json")
     var dataCards : mainJSON!
     var cardsArray: [listStruct] = []
     
-    init() {
+    weak var cardDataDelegate: CardDataDelegate!
+    
+    init(delegate: CardDataDelegate) {
+        self.cardDataDelegate = delegate
         getInfo()
     }
 
@@ -34,7 +41,21 @@ class JSONData {
         let decoder = JSONDecoder()
         do {
             self.dataCards = try! decoder.decode(mainJSON.self, from: data)
-            print(self.dataCards.result.title)
+            getCardsArray()
         }
     }
+    
+    func getCardsArray() {
+        for x in 0...self.dataCards.result.list.count-1 {
+            let cardData = self.dataCards.result.list[x]
+            cardsArray += [cardData]
+        }
+        sendDataToView()
+    }
+    
+    func sendDataToView () {
+        self.cardDataDelegate.updateData(status: self.dataCards.status)
+    }
 }
+
+    
