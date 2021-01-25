@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Avito_Test_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf4-L4-kxT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-Tg-qsL">
+                                <rect key="frame" x="25" y="25" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="gtr-wT-AVH"/>
+                                    <constraint firstAttribute="width" constant="52" id="mV5-Dc-SJC"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-SS-eya">
+                                <rect key="frame" x="102" y="25" width="242" height="153"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 10 раз больше просмотров на 1 день" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8R-3f-kmN">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="fFQ-qR-ZVx"/>
+                                            <constraint firstAttribute="width" constant="220" id="yg1-WC-aly"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пользователи смогут посмотреть фотографии, описание и телефон прямо из результатов поиска." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="wEl-pM-TYi">
+                                        <rect key="frame" x="0.0" y="63" width="220" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="0C1-SZ-C2W"/>
+                                            <constraint firstAttribute="height" constant="50" id="1zQ-lH-u6i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.086747085492227982" green="0.086747085492227982" blue="0.086747085492227982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-ik-5hu">
+                                        <rect key="frame" x="0.0" y="131" width="50" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Rpm-Jk-euD"/>
+                                            <constraint firstAttribute="width" constant="50" id="WiO-aK-wwo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g8R-3f-kmN" firstAttribute="leading" secondItem="cbC-SS-eya" secondAttribute="leading" id="Jca-wK-jy3"/>
+                                    <constraint firstAttribute="bottom" secondItem="mGb-ik-5hu" secondAttribute="bottom" id="XLD-V6-2zA"/>
+                                    <constraint firstItem="g8R-3f-kmN" firstAttribute="top" secondItem="cbC-SS-eya" secondAttribute="top" id="rag-Xe-vK0"/>
+                                    <constraint firstItem="mGb-ik-5hu" firstAttribute="leading" secondItem="cbC-SS-eya" secondAttribute="leading" id="wb8-D6-618"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ik-if-A6q">
+                                <rect key="frame" x="353" y="33" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="jgf-kX-qLE"/>
+                                    <constraint firstAttribute="height" constant="36" id="kT9-Fc-SUd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80318976683937826" green="0.80318976683937826" blue="0.80318976683937826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cbC-SS-eya" secondAttribute="bottom" constant="25" id="2JO-pP-KBs"/>
+                            <constraint firstItem="yTB-Tg-qsL" firstAttribute="leading" secondItem="Sf4-L4-kxT" secondAttribute="leading" constant="25" id="6iM-D8-UxT"/>
+                            <constraint firstAttribute="trailing" secondItem="cbC-SS-eya" secondAttribute="trailing" constant="70" id="ALP-zb-Mhj"/>
+                            <constraint firstItem="cbC-SS-eya" firstAttribute="leading" secondItem="Sf4-L4-kxT" secondAttribute="leading" constant="102" id="Mqo-gq-WKq"/>
+                            <constraint firstItem="3Ik-if-A6q" firstAttribute="top" secondItem="Sf4-L4-kxT" secondAttribute="top" constant="33" id="eW1-bL-FJa"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ik-if-A6q" secondAttribute="trailing" constant="25" id="fXk-xn-RxH"/>
+                            <constraint firstItem="cbC-SS-eya" firstAttribute="top" secondItem="Sf4-L4-kxT" secondAttribute="top" constant="25" id="jzL-g7-lW4"/>
+                            <constraint firstItem="yTB-Tg-qsL" firstAttribute="top" secondItem="Sf4-L4-kxT" secondAttribute="top" constant="25" id="wGE-yg-jbN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Sf4-L4-kxT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="S0e-8G-QXQ"/>
+                <constraint firstAttribute="trailing" secondItem="Sf4-L4-kxT" secondAttribute="trailing" id="oqr-b8-Vys"/>
+                <constraint firstAttribute="bottom" secondItem="Sf4-L4-kxT" secondAttribute="bottom" id="uzj-rk-TO3"/>
+                <constraint firstItem="Sf4-L4-kxT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zYO-gK-JMH"/>
+            </constraints>
+            <size key="customSize" width="379" height="200"/>
+            <point key="canvasLocation" x="-486.95652173913049" y="-72.65625"/>
+        </collectionViewCell>
+    </objects>
+</document>
