@@ -26,29 +26,29 @@
                                     <constraint firstAttribute="width" constant="52" id="mV5-Dc-SJC"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-SS-eya">
-                                <rect key="frame" x="72" y="10" width="252" height="154"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-SS-eya">
+                                <rect key="frame" x="72" y="10" width="252" height="159"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 10 раз больше просмотров на 1 день" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8R-3f-kmN">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 10 раз больше просмотров на 1 день" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8R-3f-kmN">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="59"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="ur5-5W-T5f"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="ur5-5W-T5f"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пользователи смогут посмотреть фотографии, описание и телефон прямо из результатов поиска." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEl-pM-TYi">
-                                        <rect key="frame" x="0.0" y="62" width="232.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="64" width="243.5" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="gta-vT-puQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.086747085492227982" green="0.086747085492227982" blue="0.086747085492227982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 ₽" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-ik-5hu">
-                                        <rect key="frame" x="0.0" y="124" width="49" height="30"/>
+                                        <rect key="frame" x="0.0" y="129" width="49" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YtE-cU-2ZV"/>
                                         </constraints>
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" red="0.80318976683937826" green="0.80318976683937826" blue="0.80318976683937826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cbC-SS-eya" firstAttribute="leading" secondItem="Sf4-L4-kxT" secondAttribute="leading" constant="72" id="0z3-TO-wuk"/>
-                            <constraint firstAttribute="bottom" secondItem="cbC-SS-eya" secondAttribute="bottom" constant="20" id="1oG-zp-jGS"/>
+                            <constraint firstAttribute="bottom" secondItem="cbC-SS-eya" secondAttribute="bottom" constant="15" id="1oG-zp-jGS"/>
                             <constraint firstAttribute="trailing" secondItem="cbC-SS-eya" secondAttribute="trailing" constant="50" id="5lL-dw-59N"/>
                             <constraint firstAttribute="trailing" secondItem="3Ik-if-A6q" secondAttribute="trailing" constant="8" id="Et1-k6-a26"/>
                             <constraint firstItem="yTB-Tg-qsL" firstAttribute="top" secondItem="Sf4-L4-kxT" secondAttribute="top" constant="10" id="Rvn-RP-8xX"/>

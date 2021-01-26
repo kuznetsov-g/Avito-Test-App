@@ -115,7 +115,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             indexSelectedCell = indexPath.row
             self.actionButton.setTitle(cardsData.dataCards.result.selectedActionTitle  , for: .normal)
         }
+        
         cardsCollection.reloadData()
+        self.cardsCollection.scrollToItem(at: IndexPath.init(row: indexPath.row , section: 1), at: .top, animated: true)
     }
     
     
