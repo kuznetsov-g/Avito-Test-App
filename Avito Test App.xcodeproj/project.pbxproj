@@ -17,6 +17,9 @@
 		283B7B4525BF3B380065314C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B4325BF3B380065314C /* CollectionViewCell.swift */; };
 		283B7B4625BF3B380065314C /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B4425BF3B380065314C /* CollectionViewCell.xib */; };
 		283B7B4E25BF4DDC0065314C /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B4D25BF4DDC0065314C /* JSONData.swift */; };
+		283B7B5625BF775B0065314C /* checkmark.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B5525BF775B0065314C /* checkmark.pdf */; };
+		283B7B5925BF77630065314C /* CloseIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B5825BF77630065314C /* CloseIconTemplate.pdf */; };
+		283B7B5C25BF77DB0065314C /* PDFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B5B25BF77DB0065314C /* PDFData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		283B7B4325BF3B380065314C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		283B7B4425BF3B380065314C /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		283B7B4D25BF4DDC0065314C /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
+		283B7B5525BF775B0065314C /* checkmark.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = checkmark.pdf; sourceTree = "<group>"; };
+		283B7B5825BF77630065314C /* CloseIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CloseIconTemplate.pdf; sourceTree = "<group>"; };
+		283B7B5B25BF77DB0065314C /* PDFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 			children = (
 				283B7B4025BF35C20065314C /* JSONStruct.swift */,
 				283B7B4D25BF4DDC0065314C /* JSONData.swift */,
+				283B7B5B25BF77DB0065314C /* PDFData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +113,8 @@
 				283B7B2425BF32BE0065314C /* SceneDelegate.swift */,
 				283B7B2B25BF32C00065314C /* Assets.xcassets */,
 				283B7B2D25BF32C00065314C /* LaunchScreen.storyboard */,
+				283B7B5525BF775B0065314C /* checkmark.pdf */,
+				283B7B5825BF77630065314C /* CloseIconTemplate.pdf */,
 				283B7B3025BF32C00065314C /* Info.plist */,
 			);
 			path = Sys;
@@ -170,7 +179,9 @@
 			files = (
 				283B7B2F25BF32C00065314C /* LaunchScreen.storyboard in Resources */,
 				283B7B2C25BF32C00065314C /* Assets.xcassets in Resources */,
+				283B7B5925BF77630065314C /* CloseIconTemplate.pdf in Resources */,
 				283B7B4625BF3B380065314C /* CollectionViewCell.xib in Resources */,
+				283B7B5625BF775B0065314C /* checkmark.pdf in Resources */,
 				283B7B2A25BF32BE0065314C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +196,7 @@
 				283B7B4E25BF4DDC0065314C /* JSONData.swift in Sources */,
 				283B7B4525BF3B380065314C /* CollectionViewCell.swift in Sources */,
 				283B7B2725BF32BE0065314C /* ViewController.swift in Sources */,
+				283B7B5C25BF77DB0065314C /* PDFData.swift in Sources */,
 				283B7B2325BF32BE0065314C /* AppDelegate.swift in Sources */,
 				283B7B4125BF35C20065314C /* JSONStruct.swift in Sources */,
 				283B7B2525BF32BE0065314C /* SceneDelegate.swift in Sources */,

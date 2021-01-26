@@ -11,8 +11,10 @@ import Foundation
 class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cellTopTitle   : UILabel!
-    @IBOutlet weak var cellDescription: UILabel!
+    @IBOutlet weak var cellDescription: UILabel?
     @IBOutlet weak var cellPrice      : UILabel!
+    @IBOutlet weak var selectedIcon: UIImageView!
+    @IBOutlet weak var customView: UIView!
     
     
     
@@ -24,11 +26,9 @@ class CollectionViewCell: UICollectionViewCell {
 //    , cellImageProduct: Dictionary<String, String>, cellImageSelected: Bool)
     {
         self.cellTopTitle.text    = cellTopTitle
-        self.cellDescription.text = cellDescription
+        self.cellDescription?.text = cellDescription
         self.cellPrice.text       = cellPrice
-        if cellDescription == " " {
-            self.cellDescription.isHidden = true
-    }
+        
     
 }
 }

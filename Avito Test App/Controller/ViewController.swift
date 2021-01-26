@@ -12,15 +12,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var cardsCollection: UICollectionView!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var closeImage: UIImageView!
     
+    @IBOutlet var mainView: UIView!
     
     var cardsData : JSONData!
-    
+    var indexSelectedCell = -1
     @IBAction func getActionButton(_ sender: Any) {
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        actionButton.layer.cornerRadius = 12
+//        let closeIcon = PDFData(fileName: "CloseIconTemplate", delegate: self)
+//        closeImage.image = closeIcon.iconImage
+        
         
         startFunc()
         
@@ -32,6 +38,12 @@ class ViewController: UIViewController {
         cardsCollection.reloadData()
     }
 }
+
+//extension ViewController: PDFDataProtocol {
+//    func getPDFImage(icon: UIImage) {
+//        closeImage.image = icon
+//    }
+//}
 
 extension ViewController: CardDataDelegate {
     func updateData(status: String) {
@@ -57,7 +69,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let checkDescription : String
         if let _ = cellData.description {
             checkDescription = cellData.description! }
-        else { checkDescription = " " }
+        else { checkDescription = "" }
         cell.commonInit(cellTopTitle: cellData.title ,
                         cellDescription: checkDescription ,
                         cellPrice: cellData.price //,
@@ -65,8 +77,34 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 //                        cellImageSelected: true
         )
         cell.layer.cornerRadius = 12
+        
+//        if checkDescription == "" {
+//            cell.cellDescription.isHidden = true
+//    }
+        
+        if indexPath.row == indexSelectedCell {
+            cell.selectedIcon.isHidden = false
+            cell.customView.backgroundColor = .white
+        } else
+            if indexSelectedCell == -1 || indexPath.row != indexSelectedCell {
+            cell.selectedIcon.isHidden = true
+            cell.customView.backgroundColor = .gray
+        }
+        
        return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexSelectedCell == indexPath.row {
+            indexSelectedCell = -1
+        } else {
+            indexSelectedCell = indexPath.row
+        }
+        cardsCollection.reloadData()
+    }
+    
+    
 }
 
 extension ViewController {
