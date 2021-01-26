@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBAction func getActionButton(_ sender: Any) {
         if indexSelectedCell == -1 {
-            showAlert(title: "Уточните, пожалуйста", message: "вы уверены, что не хотите пользоваться платными услугами?")
+            showAlert(title: "Уточните, пожалуйста:", message: "вы уверены, что не хотите пользоваться платными услугами?")
         } else {
             showAlert(title: "Вы выбрали услугу", message: cardsData.dataCards.result.list[indexSelectedCell].title)
         }
@@ -82,22 +82,23 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         if let _ = cellData.description {
             checkDescription = cellData.description! }
         else { checkDescription = "" }
-        cell.commonInit(cellTopTitle: cellData.title ,
+        cell.commonInit(cellTopTitle   : cellData.title ,
                         cellDescription: checkDescription ,
-                        cellPrice: cellData.price //,
+                        cellPrice      : cellData.price,
+                        productImage   : cellData.icon
         )
         
         cell.layer.cornerRadius = 12
-        cell.customView.backgroundColor?.withAlphaComponent(0.5)
-
 
         if indexPath.row == indexSelectedCell {
             cell.selectedIcon.isHidden = false
             cell.customView.backgroundColor = .white
+            cell.customView.backgroundColor?.withAlphaComponent(0.5)
         } else
             if indexSelectedCell == -1 || indexPath.row != indexSelectedCell {
             cell.selectedIcon.isHidden = true
             cell.customView.backgroundColor = .gray
+                cell.customView.backgroundColor?.withAlphaComponent(0.5)
         }
         
        return cell

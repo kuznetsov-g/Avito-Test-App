@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf4-L4-kxT">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="184"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-Tg-qsL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-Tg-qsL" customClass="CustomImageView" customModule="Avito_Test_App" customModuleProvider="target">
                                 <rect key="frame" x="10" y="12.5" width="52" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="gtr-wT-AVH"/>
@@ -94,6 +94,7 @@
                 <outlet property="cellPrice" destination="mGb-ik-5hu" id="0hY-EX-3HM"/>
                 <outlet property="cellTopTitle" destination="g8R-3f-kmN" id="3vb-RW-r1x"/>
                 <outlet property="customView" destination="Sf4-L4-kxT" id="3AG-bM-2aY"/>
+                <outlet property="productIcon" destination="yTB-Tg-qsL" id="Rdu-OH-OKl"/>
                 <outlet property="selectedIcon" destination="3Ik-if-A6q" id="kZb-rr-Rmf"/>
             </connections>
             <point key="canvasLocation" x="-515.94202898550725" y="-72.65625"/>

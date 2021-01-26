@@ -20,6 +20,7 @@
 		283B7B5625BF775B0065314C /* checkmark.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B5525BF775B0065314C /* checkmark.pdf */; };
 		283B7B5925BF77630065314C /* CloseIconTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 283B7B5825BF77630065314C /* CloseIconTemplate.pdf */; };
 		283B7B5C25BF77DB0065314C /* PDFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B5B25BF77DB0065314C /* PDFData.swift */; };
+		283B7B5F25BF9B410065314C /* getImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B7B5E25BF9B410065314C /* getImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		283B7B5525BF775B0065314C /* checkmark.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = checkmark.pdf; sourceTree = "<group>"; };
 		283B7B5825BF77630065314C /* CloseIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CloseIconTemplate.pdf; sourceTree = "<group>"; };
 		283B7B5B25BF77DB0065314C /* PDFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFData.swift; sourceTree = "<group>"; };
+		283B7B5E25BF9B410065314C /* getImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				283B7B4025BF35C20065314C /* JSONStruct.swift */,
 				283B7B4D25BF4DDC0065314C /* JSONData.swift */,
 				283B7B5B25BF77DB0065314C /* PDFData.swift */,
+				283B7B5E25BF9B410065314C /* getImages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283B7B5F25BF9B410065314C /* getImages.swift in Sources */,
 				283B7B4E25BF4DDC0065314C /* JSONData.swift in Sources */,
 				283B7B4525BF3B380065314C /* CollectionViewCell.swift in Sources */,
 				283B7B2725BF32BE0065314C /* ViewController.swift in Sources */,
