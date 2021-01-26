@@ -18,18 +18,26 @@ class ViewController: UIViewController {
     
     var cardsData : JSONData!
     var indexSelectedCell = -1
+    
     @IBAction func getActionButton(_ sender: Any) {
+        if indexSelectedCell == -1 {
+            showAlert(title: "Уточните, пожалуйста", message: "вы уверены, что не хотите пользоваться платными услугами?")
+        } else {
+            showAlert(title: "Вы выбрали услугу", message: cardsData.dataCards.result.list[indexSelectedCell].title)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         actionButton.layer.cornerRadius = 12
+
+
+        
 //        let closeIcon = PDFData(fileName: "CloseIconTemplate", delegate: self)
 //        closeImage.image = closeIcon.iconImage
         
         
         startFunc()
-        
         cardsCollection.delegate = self
         cardsCollection.dataSource = self
         let nibCollection = UINib.init(nibName: "CollectionViewCell", bundle: nil)
@@ -39,11 +47,15 @@ class ViewController: UIViewController {
     }
 }
 
+
+
 //extension ViewController: PDFDataProtocol {
 //    func getPDFImage(icon: UIImage) {
 //        closeImage.image = icon
 //    }
 //}
+
+
 
 extension ViewController: CardDataDelegate {
     func updateData(status: String) {
@@ -73,15 +85,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.commonInit(cellTopTitle: cellData.title ,
                         cellDescription: checkDescription ,
                         cellPrice: cellData.price //,
-//                        cellImageProduct: cellData.icon,
-//                        cellImageSelected: true
         )
+        
         cell.layer.cornerRadius = 12
-        
-//        if checkDescription == "" {
-//            cell.cellDescription.isHidden = true
-//    }
-        
+        cell.customView.backgroundColor?.withAlphaComponent(0.5)
+
+
         if indexPath.row == indexSelectedCell {
             cell.selectedIcon.isHidden = false
             cell.customView.backgroundColor = .white
@@ -95,11 +104,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
         
+
         if indexSelectedCell == indexPath.row {
+            self.actionButton.setTitle(cardsData.dataCards.result.actionTitle  , for: .normal)
             indexSelectedCell = -1
         } else {
             indexSelectedCell = indexPath.row
+            self.actionButton.setTitle(cardsData.dataCards.result.selectedActionTitle  , for: .normal)
         }
         cardsCollection.reloadData()
     }
@@ -111,5 +124,17 @@ extension ViewController {
     func startFunc() {
         cardsData = JSONData(delegate: self)
         cardsCollection.reloadData()
+    }
+}
+
+
+extension ViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(          title: title
+                                             ,message: message
+                                      ,preferredStyle: .alert )
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
